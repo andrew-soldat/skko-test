@@ -1,0 +1,124 @@
+
+.menu-skko {
+	padding: 30px 0;
+
+	&__subtitle {
+		margin: 0px 0px 35px 0px;
+		font-size: 26px;
+		font-weight: 700;
+	}
+}
+.card-skko {
+	padding: 30px;
+	background-color: $color-white;
+	min-height: 400px;
+	transition: all 0.3s ease 0s;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&:hover {
+		box-shadow: 0px 4px 27px rgba(174, 174, 174, 0.5);
+	}
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+		display: flex;
+		align-items: center;
+		font-size: 22px;
+		color: #3D3A38;
+		font-weight: 800;
+	
+		img {
+			margin: 0px 30px 0px 0px;
+		}
+	}
+
+	&__text {
+		margin: 0px 0px 30px 0px;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.35;
+	}
+}
+.skko-list {
+	padding: 0;
+	margin: 0;
+	
+	li {
+		padding: 0;
+		list-style-type: none;
+		margin: 0px 0px 20px 0px;
+		font-size: 22px;
+		color: #272727;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+}
+.skko-menu {
+	padding: 0px 0px 100px 0;
+}
+.list-skko-menu {
+	height: 100%;
+	padding: 55px 30px;
+	background-color: $color-white;
+	transition: all 0.3s ease 0s;
+}
+.accordion-skko-menu {
+	height: 100%;
+	background-color: $color-white;
+	
+	&__btn {
+		width: 100%;
+		padding: 55px 30px 0px;
+		font-size: 16px;
+		font-weight: 600;
+		text-align: left;
+		display: flex;
+		justify-content: space-between;
+		transition: all 0.3s ease 0s;
+
+		i {
+			font-size: 20px;
+			margin-left: 10px;
+		}
+
+		&.collapsed {
+			padding: 55px 30px;
+
+			i:before {
+				transform: rotate(180deg);
+			}
+		}
+
+		&:hover {
+			color: #2B9140;
+		}
+	}
+
+	&__body {
+		padding: 30px;
+		
+	}
+	&__link-download {
+		display: block;
+		color: $color-black;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.3;
+
+		i:before {
+			margin-right: 15px;
+		}
+
+		&:hover {
+			color: #2B9140;
+		}
+
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+}

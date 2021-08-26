@@ -1,0 +1,103 @@
+.address {
+	font-size: 15px;
+
+	i {
+		margin: 0px 10px 0px 0px;
+		color: $color-green;
+		font-size: 18px;
+	}
+}
+.link-contact {
+	display: block;
+	font-size: 15px;
+	color: $color-black;
+
+	i {
+		margin: 0px 10px 0px 0px;
+		color: $color-green;
+		font-size: 18px;
+	}
+}
+.button {
+	display: block;
+	background-color: $color-green;
+	width: 210px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	border-radius: 60px;
+	color: $color-white;
+	font-size: 14px;
+	font-weight: 600;
+	
+	&:hover {
+		color: inherit;
+		background-color: $color-gray-dark;
+	}
+
+	&_green-dark {
+		background-color: $color-green-dark;
+
+		&:hover {
+			color: inherit;
+			background-color: $color-gray;
+		}
+	}
+
+	&_gray-dark {
+		background-color: $color-gray-dark;
+
+		&:hover {
+			color: inherit;
+			background-color: $color-gray;
+		}
+	}
+}
+.logo {
+	display: flex;
+	align-items: center;
+
+	&__text {
+		margin: 0px 0px 0px 20px;
+		display: block;
+		width: 100%;
+		max-width: 320px;
+		font-size: 15px;
+		color: $color-black;
+	}
+}
+.breadcrumb {
+	margin: 0px 0px 30px 0px;
+}
+.breadcrumb-item {
+	margin: 0px 15px 0px 0px;
+	a {
+		font-size: 16px;
+		color: $color-black;
+
+		i {
+			padding: 0px 0px 0px 15px;
+			font-size: 10px;
+		}
+
+		&:hover {
+			color: $color-green;
+
+			i {
+				color: $color-green;
+			}
+		}
+	}
+
+	&.active {
+		color: $color-black;
+		margin: 0;
+	}
+
+	&:before {
+		display: none;
+	}
+}
+.breadcrumb-item+.breadcrumb-item {
+	padding: 0;
+}
