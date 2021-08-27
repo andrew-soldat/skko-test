@@ -661,15 +661,6 @@ body._lock {
     padding: 0px 30px 20px;
   }
 }
-.accordion-menu__link {
-  display: block;
-}
-.accordion-menu__link:hover {
-  color: #2B9040;
-}
-.accordion-menu__link:not(:last-child) {
-  margin: 0px 0px 20px 0px;
-}
 
 .contacts {
   margin: 0px 0px 60px 0px;
@@ -723,6 +714,11 @@ body._lock {
 .requisites .tab-pane {
   background-color: #FCFCFC;
   padding: 40px 30px 10px;
+}
+@media (max-width: 564.98px) {
+  .requisites .tab-pane {
+    padding: 30px 20px 10px;
+  }
 }
 
 .banner {
@@ -869,7 +865,7 @@ body._lock {
 
 .page-404 {
   height: 100vh;
-  background: url("../img/404.jpg") center no-repeat;
+  background: url("../img/4041.png") center no-repeat;
 }
 
 .cto {
