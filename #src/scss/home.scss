@@ -67,6 +67,10 @@
 	@media (max-width: $md2+px) {
 		padding: 20px;
 	}
+
+	@media (max-width: $md4+px) {
+		padding: 10px;
+	}
 	
 	&:hover {
 		box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1 );
@@ -111,7 +115,6 @@
 	
 	&__row {
 		display: flex;
-		align-items: center;
 	}
 
 	&__icon {
@@ -136,6 +139,9 @@
 			background-image: url('../img/icon-menu/04.png');
 		}
 
+		@media (max-width: $md2+px) {
+			margin: 0px 15px 0px 0px;
+		}
 	}
 
 	&__icon-small {
@@ -193,6 +199,10 @@
 		@media (max-width: $md3+px) {
 			padding: 20px;
 		}
+
+		@media (max-width: $md4+px) {
+			padding: 15px;
+		}
 		
 		i {
 			font-size: 20px;
@@ -200,12 +210,6 @@
 		}
 		
 		&.collapsed {
-			padding: 45px 30px;
-
-			@media (max-width: $md3+px) {
-				padding: 20px;
-			}
-
 			i:before {
 				transform: rotate(180deg);
 			}
@@ -270,6 +274,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		text-align: left;
 
 		@media (min-width: 600px) {
 			display: none;
@@ -293,29 +298,11 @@
 		background-color: $color-white;
 		padding: 40px 30px 10px;
 	}
-
-	&__link-download {
-		display: block;
-		margin: 0px 0px 20px 0px;
-
-		i {
-			margin: 0px 10px 0px 0px;
-		}
-
-		&:hover {
-			color: $color-green;
-		}
-	}
 }
+// =========   BANNER  =============================================
 .banner {
-	margin: 0px 0px 30px 0px;
-	
-	&__link {
-		
-	}
+	margin: 0px 0px 60px 0px;
 }
-
-
 .accordion-skko {
 	
 	&__btn {
@@ -358,6 +345,7 @@
 		}
 	}
 }
+// =========   FAQ  =============================================
 .faq {
 	margin: 0px 0px 90px 0px;
 	
@@ -389,7 +377,7 @@
 	}
 }
 
-
+// =========   NEWS  =============================================
 .news {
 	margin: 0px 0px 90px 0px;
 
@@ -399,56 +387,30 @@
 }
 .item-news {
 	height: 100%;
-	display: block;
-	transition: all 0.3s ease 0s;
-
-	&:hover {
-		box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
-	}
 	
 	&_big {
 		background-color: $color-white;
 		padding: 15px;
 
-
 		.item-news__img {
-			margin: 0px 0px 30px 0px;
+			padding: 54% 0px 0px 0px;
+
+			@media (max-width: $md3+px) {
+				padding: 64% 0px 0px 0px;
+			}
 		}
 
 		.item-news__title {
 			font-size: 22px;
-		}
 
-		.item-news__text {
-			margin: 0px;
-		}
-
-		@media (max-width: $md3+px) {
-			.item-news__img {
-				margin: 0px 0px 10px 0px;
-			}
-	
-			.item-news__title {
+			@media (max-width: $md3+px) {
 				font-size: 16px;
 			}
 		}
 	}
 
 	&__img {
-		margin: 0px 0px 10px 0px;
-
-		img {
-			object-fit: cover;
-		}
-	}
-
-	&__head {
-		display: flex;
-		margin: 0px 0px 15px 0px;
-
-		@media (max-width: $md4+px) {
-			display: block;
-		}
+		padding: 64% 0px 0px 0px;
 	}
 
 	&__title {
@@ -458,11 +420,15 @@
 		@media (max-width: $md4+px) {
 			margin: 0px 0px 5px 0px;
 		}
+
+		&:hover {
+			text-decoration: underline;
+			color: $color-green;
+		}
 	}
 
 	&__text {
 		font-size: 14px;
-		margin: 0px 0px 20px 0px;
 	}
 }
 .news-post {
@@ -478,21 +444,31 @@
 		}
 	}
 
-	&__head {
+	&__content {
 		width: 100%;
-		max-width: 820px;
+		max-width: 1020px;
 		margin: 0 auto;
 		padding: 0 20px;
+	
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 24px auto;
+		}
+	
+		ul li {
+			list-style: disc;
+		}
 	}
+}
 
-	p {
-		width: 100%;
-		max-width: 820px;
-		margin: 16px auto;
-		padding: 0 20px;
-	}
+.page-404 {
+	height: 100vh;
+	background: url('../img/404.jpg') center no-repeat;
 
-	&__img {
-		margin: 24px 0;
-	}
+}
+
+.cto {
+	margin: 0px 0px 100px 0px;
 }

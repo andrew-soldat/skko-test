@@ -2,8 +2,8 @@ $('.slider-advertising-banners__body').slick({
 	infinite: true,
 	slidesToShow: 5,
 	slidesToScroll: 1,
-	autoplay: true,
-	autoplaySpeed: 3000,
+	// autoplay: true,
+	// autoplaySpeed: 3000,
 	dots: false,
 	responsive: [
 		{
@@ -14,7 +14,7 @@ $('.slider-advertising-banners__body').slick({
 			}
 		},
 		{
-			breakpoint: 991,
+			breakpoint: 1250,
 			settings: {
 				slidesToShow: 4,
 				arrows: false,
@@ -22,7 +22,7 @@ $('.slider-advertising-banners__body').slick({
 			}
 		},
 		{
-			breakpoint: 765,
+			breakpoint: 1000,
 			settings: {
 				slidesToShow: 3,
 				arrows: false,
@@ -30,7 +30,7 @@ $('.slider-advertising-banners__body').slick({
 			}
 		},
 		{
-			breakpoint: 565,
+			breakpoint: 768,
 			settings: {
 				slidesToShow: 2,
 				arrows: false,
@@ -38,7 +38,7 @@ $('.slider-advertising-banners__body').slick({
 			}
 		},
 		{
-			breakpoint: 400,
+			breakpoint: 565,
 			settings: {
 				slidesToShow: 1,
 				arrows: false,
@@ -48,23 +48,31 @@ $('.slider-advertising-banners__body').slick({
 	]
 });
 
-// $(".tab-pane").hide();
-// $(".tab-pane:first").show();
-/* в режиме вкладок */
-// $("ul.tabs li").click(function () {
-// 	$(".tab_content").hide();
-// 	var activeTab = $(this).attr("rel");
-// 	$("#" + activeTab).fadeIn();
-// 	$("ul.tabs li").removeClass("active");
-// 	$(this).addClass("active");
-// 	$(".tab_accordion").removeClass("d_active");
-// 	$(".tab_accordion[rel^='" + activeTab + "']").addClass("d_active");
-// });
-/* в режиме аккордеона */
+// =============  adaptive img   ==========================================================
+
+function ibg() {
+	let ibg = document.querySelectorAll("._ibg");
+	for (var i = 0; i < ibg.length; i++) {
+		if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
+			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+		}
+	}
+}
+ibg();
+
+// ============  tab to accordion  ========================================================
+
 $(".requisites__tab-accordion").click(function () {
-	$(".tab-pane").removeClass("active show");
-	$(".requisites__tab-accordion").removeClass("d_active");
-	var d_activeTab = $(this).attr("rel");
-	$("#" + d_activeTab).addClass("active show");
-	$(this).addClass("d_active");
+	if ($(this).hasClass("d_active")) {
+		console.log('yes');
+		var d_activeTab = $(this).attr("rel");
+		$("#" + d_activeTab).removeClass("active show");
+		$(this).removeClass("d_active");
+	} else {
+		$(".tab-pane").removeClass("active show");
+		$(".requisites__tab-accordion").removeClass("d_active");
+		var d_activeTab = $(this).attr("rel");
+		$("#" + d_activeTab).addClass("active show");
+		$(this).addClass("d_active");
+	}
 });

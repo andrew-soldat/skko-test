@@ -206,7 +206,7 @@ function watchFiles() {
 	gulp.watch([path.watch.images], images);
 }
 gulp.task('deploy', function() {
-	return gulp.src('./build/**/*')
+	return gulp.src('./skko-test/**/*')
 	  .pipe(deploy());
  });
 function cssBuild() {

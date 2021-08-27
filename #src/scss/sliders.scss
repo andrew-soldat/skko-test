@@ -11,7 +11,7 @@
 	}
 
 	&__item {
-		margin: 0 10px;
+		// margin: 0 10px;
 		position: relative;
 		z-index: 2;
 
@@ -33,7 +33,9 @@
       }
 
 		img {
-			max-width: 100%;
+			margin: 0 auto;
+			max-width: 220px;
+			height: 150px;
 		}
    }
 }
