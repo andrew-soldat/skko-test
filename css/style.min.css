@@ -200,6 +200,13 @@ body._lock {
   color: inherit;
   background-color: #C5C3C3;
 }
+.button_gray {
+  background-color: #C5C3C3;
+}
+.button_gray:hover {
+  color: inherit;
+  background-color: #ECECEC;
+}
 .button_gray-dark {
   background-color: #A1A1A1;
 }
@@ -695,6 +702,10 @@ body._lock {
   justify-content: space-between;
   align-items: center;
   text-align: left;
+  border-bottom: 1px solid #C5C3C3;
+}
+.requisites__tab-accordion_last {
+  border-bottom: none;
 }
 @media (min-width: 600px) {
   .requisites__tab-accordion {
@@ -870,4 +881,9 @@ body._lock {
 
 .cto {
   margin: 0px 0px 100px 0px;
+}
+
+.item-contacts {
+  margin: 0px 0px 90px 0px;
+  line-height: 1.6;
 }
