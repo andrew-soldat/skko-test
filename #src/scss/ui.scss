@@ -51,6 +51,15 @@
 		}
 	}
 
+	&_gray {
+		background-color: $color-gray;
+
+		&:hover {
+			color: inherit;
+			background-color: $color-gray-light;
+		}
+	}
+
 	&_gray-dark {
 		background-color: $color-gray-dark;
 

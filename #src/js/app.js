@@ -64,7 +64,6 @@ ibg();
 
 $(".requisites__tab-accordion").click(function () {
 	if ($(this).hasClass("d_active")) {
-		console.log('yes');
 		var d_activeTab = $(this).attr("rel");
 		$("#" + d_activeTab).removeClass("active show");
 		$(this).removeClass("d_active");

@@ -227,19 +227,6 @@
 			padding: 0px 30px 20px;
 		}
 	}
-
-	&__link {
-		display: block;
-
-		&:hover {
-			color: $color-green;
-		}
-
-		&:not(:last-child) {
-			margin: 0px 0px 20px 0px;
-		}
-
-	}
 }
 .contacts {
 	margin: 0px 0px 60px 0px;
@@ -275,6 +262,12 @@
 		justify-content: space-between;
 		align-items: center;
 		text-align: left;
+		border-bottom: 1px solid $color-gray;
+
+		&_last {
+			border-bottom: none;
+		}
+
 
 		@media (min-width: 600px) {
 			display: none;
@@ -297,6 +290,10 @@
 	.tab-pane {
 		background-color: $color-white;
 		padding: 40px 30px 10px;
+
+		@media (max-width: $md4+px) {
+			padding: 30px 20px 10px;
+		}
 	}
 }
 // =========   BANNER  =============================================
@@ -466,9 +463,13 @@
 .page-404 {
 	height: 100vh;
 	background: url('../img/404.jpg') center no-repeat;
-
 }
 
 .cto {
 	margin: 0px 0px 100px 0px;
+}
+
+.item-contacts {
+	margin: 0px 0px 90px 0px;
+	line-height: 1.6;
 }
