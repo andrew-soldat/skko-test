@@ -49,7 +49,6 @@ $('.slider-advertising-banners__body').slick({
 });
 
 // =============  adaptive img   ==========================================================
-
 function ibg() {
 	let ibg = document.querySelectorAll("._ibg");
 	for (var i = 0; i < ibg.length; i++) {
@@ -60,8 +59,8 @@ function ibg() {
 }
 ibg();
 
-// ============  tab to accordion  ========================================================
 
+// ============  tab to accordion  ========================================================
 $(".requisites__tab-accordion").click(function () {
 	if ($(this).hasClass("d_active")) {
 		var d_activeTab = $(this).attr("rel");
@@ -75,3 +74,13 @@ $(".requisites__tab-accordion").click(function () {
 		$(this).addClass("d_active");
 	}
 });
+
+// ==================   Change src banner   =============================================
+const imgBanner = document.querySelector(".banner__img")
+if (imgBanner) {
+	if($(window).width() < 768) {
+		imgBanner.src = "./img/link-banner-mobile.jpg"
+	} else {
+		imgBanner.src = "./img/link-banner.png"
+	}
+}

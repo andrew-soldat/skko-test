@@ -51,7 +51,7 @@
 	}
 }
 .main-menu {
-	padding: 15px  0 100px 0;
+	padding: 15px 0 85px 0;
 }
 .item-skko-menu {
 	display: block;
@@ -108,6 +108,10 @@
 			background-image: url('../img/icon-menu/08-green.png');
 		}
 
+		.item-skko-menu__icon_09 {
+			background-image: url('../img/icon-menu/09-green.png');
+		}
+
 		.item-skko-menu__title {
 			color: $color-green;
 		}
@@ -139,6 +143,12 @@
 			background-image: url('../img/icon-menu/04.png');
 		}
 
+		&_09 {
+			flex: 0 0 55px;
+			height: 50px;
+			background-image: url('../img/icon-menu/09.png');
+		}
+
 		@media (max-width: $md2+px) {
 			margin: 0px 15px 0px 0px;
 		}
@@ -165,7 +175,6 @@
 		&_08 {
 			background-image: url('../img/icon-menu/08.png');
 		}
-
 	}
 
 	&__title {
@@ -181,7 +190,6 @@
 		}
 	}
 }
-
 .accordion-menu {
 	background-color: $color-white;
 	
@@ -191,6 +199,7 @@
 		font-size: 16px;
 		font-weight: 600;
 		text-align: left;
+		background-color: $color-white;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -229,13 +238,13 @@
 	}
 }
 .contacts {
-	margin: 0px 0px 60px 0px;
+	margin: 0px 0px 45px 0px;
 }
 .requisites {
 	margin: 0px 0px 60px 0px;
 
 	&__nav-tab {
-		@media (max-width: 600px) {
+		@media (max-width: $md3+px) {
 			display: none;
 		}
 	}
@@ -244,12 +253,13 @@
 		padding: 45px 30px;
 		font-weight: normal;
 		text-align: center;
+		background-color: transparent;
 
 		&.active {
 			background-color: $color-white;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: $md3+px) {
 			padding: 25px;
 		}
 	}
@@ -269,7 +279,7 @@
 		}
 
 
-		@media (min-width: 600px) {
+		@media (min-width: $md3+px) {
 			display: none;
 		}
 
@@ -373,10 +383,9 @@
 		}
 	}
 }
-
 // =========   NEWS  =============================================
 .news {
-	margin: 0px 0px 90px 0px;
+	margin: 0px 0px 75px 0px;
 
 	&__btn {
 		margin: 30px auto 0;
@@ -459,17 +468,25 @@
 		}
 	}
 }
-
 .page-404 {
 	height: 100vh;
 	background: url('../img/404.jpg') center no-repeat;
 }
-
 .cto {
 	margin: 0px 0px 100px 0px;
 }
-
 .item-contacts {
 	margin: 0px 0px 90px 0px;
 	line-height: 1.6;
+}
+.item-partners {
+	background-color: $color-white;
+
+	i {
+		color: $color-green;
+	}
+
+	a:hover {
+		color: $color-green;
+	}
 }

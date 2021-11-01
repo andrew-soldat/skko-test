@@ -2,7 +2,6 @@
 	font-size: 15px;
 
 	i {
-		margin: 0px 10px 0px 0px;
 		color: $color-green;
 		font-size: 18px;
 	}
@@ -89,7 +88,9 @@
 	}
 }
 .breadcrumb {
+	padding: 0;
 	margin: 0px 0px 30px 0px;
+	background-color: transparent;
 }
 .breadcrumb-item {
 	margin: 0px 15px 0px 0px;
