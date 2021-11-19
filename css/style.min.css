@@ -666,6 +666,9 @@ body._lock {
   font-size: 20px;
   margin-left: 10px;
 }
+.accordion-menu__btn i:before {
+  transition: all 0.3s ease 0s;
+}
 .accordion-menu__btn.collapsed i:before {
   transform: rotate(180deg);
 }
@@ -720,6 +723,9 @@ body._lock {
 .requisites__tab-accordion_last {
   border-bottom: none;
 }
+.requisites__tab-accordion_last.d_active {
+  border-bottom: 1px solid #C5C3C3;
+}
 @media (min-width: 767.98px) {
   .requisites__tab-accordion {
     display: none;
@@ -728,6 +734,9 @@ body._lock {
 .requisites__tab-accordion i {
   font-size: 20px;
   margin-left: 10px;
+}
+.requisites__tab-accordion i:before {
+  transition: all 0.3s ease 0s;
 }
 .requisites__tab-accordion.d_active {
   color: #2B9140;
