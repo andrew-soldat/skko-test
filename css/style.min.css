@@ -571,8 +571,8 @@ body._lock {
 .item-skko-menu:hover .item-skko-menu__icon-small_08 {
   background-image: url("../img/icon-menu/08-green.png");
 }
-.item-skko-menu:hover .item-skko-menu__icon_09 {
-  background-image: url("../img/icon-menu/09-green.png");
+.item-skko-menu:hover .item-skko-menu__icon-bg {
+  background: url("../img/icon-menu/09-green.png") no-repeat;
 }
 .item-skko-menu:hover .item-skko-menu__title {
   color: #2B9040;
@@ -598,11 +598,6 @@ body._lock {
 .item-skko-menu__icon_04 {
   background-image: url("../img/icon-menu/04.png");
 }
-.item-skko-menu__icon_09 {
-  flex: 0 0 55px;
-  height: 50px;
-  background-image: url("../img/icon-menu/09.png");
-}
 @media (max-width: 991.98px) {
   .item-skko-menu__icon {
     margin: 0px 15px 0px 0px;
@@ -625,6 +620,11 @@ body._lock {
 }
 .item-skko-menu__icon-small_08 {
   background-image: url("../img/icon-menu/08.png");
+}
+.item-skko-menu__icon-bg {
+  width: 55px;
+  height: 40px;
+  background: url("../img/icon-menu/09.png") no-repeat;
 }
 .item-skko-menu__title {
   display: block;
