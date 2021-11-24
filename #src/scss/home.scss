@@ -109,8 +109,8 @@
 			background-image: url('../img/icon-menu/08-green.png');
 		}
 
-		.item-skko-menu__icon_09 {
-			background-image: url('../img/icon-menu/09-green.png');
+		.item-skko-menu__icon-bg {
+			background: url('../img/icon-menu/09-green.png') no-repeat;
 		}
 
 		.item-skko-menu__title {
@@ -144,12 +144,6 @@
 			background-image: url('../img/icon-menu/04.png');
 		}
 
-		&_09 {
-			flex: 0 0 55px;
-			height: 50px;
-			background-image: url('../img/icon-menu/09.png');
-		}
-
 		@media (max-width: $md2+px) {
 			margin: 0px 15px 0px 0px;
 		}
@@ -176,6 +170,12 @@
 		&_08 {
 			background-image: url('../img/icon-menu/08.png');
 		}
+	}
+
+	&__icon-bg {
+		width: 55px;
+		height: 40px;
+		background: url('../img/icon-menu/09.png') no-repeat;
 	}
 
 	&__title {
@@ -217,6 +217,10 @@
 		i {
 			font-size: 20px;
 			margin-left: 10px;
+
+			&:before {
+				transition: all 0.3s ease 0s;
+			}
 		}
 		
 		&.collapsed {
@@ -277,6 +281,10 @@
 
 		&_last {
 			border-bottom: none;
+
+			&.d_active {
+				border-bottom: 1px solid $color-gray;
+			}
 		}
 
 
@@ -287,6 +295,10 @@
 		i {
 			font-size: 20px;
 			margin-left: 10px;
+			
+			&:before {
+				transition: all 0.3s ease 0s;
+			}
 		}
 		
 		&.d_active {
