@@ -18,40 +18,68 @@
 </head>
 	<body>
 		<div class="wrapper">
-			<header class="header"> 
-	<div class='_container'>
-		<div class="header__body">
-			<a class="header__logo logo" href="https://info-center.by">
-				<img src="./img/logo.png" alt="info-center.by">
-				<div class="logo__text">Республиканское унитарное предприятие
-					«Информационно-издательский центр
-					по налогам и сборам»</div>
-			</a>
-			<div class="header__contacts">
-				<div class="header__link address"><i class="bi-geo-alt-fill mr-2"></i>г. Минск, ул. Скорины, 8, 3 этаж</div>
-				<a class="header__link link-contact link" href="tel:+375298732715"><i class="bi bi-telephone mr-2"></i><span>+375 29 873-27-15</span></a>
+			<header class="header">
+	<div class="header-top">
+		<div class='_container'>
+			<div class="header-top__body">
+				<a class="header-top__logo logo" href="https://info-center.by">
+					<img src="./img/logo.png" alt="info-center.by">
+					<span class="logo__text">Республиканское унитарное предприятие
+						«Информационно-издательский центр
+						по налогам и сборам»</span>
+				</a>
+				<div class="header-top__menu">
+					<div class="header-top__contacts">
+						<a class="header-top__link link" href="https://yandex.by/maps/-/CCURUUf-sA" target="_blank"><i class="bi-geo-alt mr-2"></i>г. Минск, ул. Скорины, 8, 3 этаж</a>
+						<a class="header-top__link link" href="tel:+375298732715"><i class="bi bi-telephone mr-2"></i><span>+375 29 873-27-15</span></a>
+					</div>
+					<div>
+						<a href="https://lk.skko.by/" target="_blank" class="mb-2 button">Войти с ЭЦП</a>
+						<a href="http://support.skno.by:1444/" target="_blank" class="button button_empty">Портал самообслуживания</a>
+					</div>
+				</div>
+				<div class="header-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="overlay"></div>
 			</div>
-			<div>
-				<a href="#" class="mb-2 button">Войти с ЭЦП</a>
-				<a href="#" class="button button_green-dark">Портал самообслуживания</a>
-			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class='_container'>
+			<nav class="header-bottom__nav" data-da=".header-top__menu,768,0">
+				<ul class="header-bottom__list">
+					<li>
+						<a href="news.html" class="header-bottom__link link">Новости</a>
+					</li>
+					<li>
+						<a href="users.html" class="header-bottom__link link">Пользователям СККО</a>
+					</li>
+					<li>
+						<a href="pay.html" class="header-bottom__link link">Для оплаты</a>
+					</li>
+					<li>
+						<a href="contacts.html" class="header-bottom__link link">Контакты</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
 	</div>
 </header>
-<div class="main-block">
+<section class="main-block">
 	<div class='_container'>
-		<div class="d-lg-flex align-items-center justify-content-between">
+		<div class="d-flex flex-lg-row flex-column align-items-center justify-lg-content-between justify-content-center">
 			<div class="order-lg-2 support__img">
-				<img class="img-fluid" src="./img/main-block.png" alt="">
+				<img class="img-fluid" src="./img/main-block.png" alt="Картинка">
 			</div>
-			<div class="main-block__content py-4 py-lg-5 order-lg-1">
-				<div class="main-block__title">Клиентская поддержка системы контроля кассового оборудования</div>
-				<a href="" class="main-block__button button">Войти с ЭЦП</a>
-				<a href="" class="main-block__link">Портал самообслуживания<i class="bi bi-chevron-right"></i></a>
+			<div class="main-block__content py-4 py-md-5 order-lg-1">
+				<h1 class="h1 main-block__title">Клиентская поддержка системы контроля кассового оборудования</h1>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 			<main class="page">
 				<nav aria-label="breadcrumb">
 					<div class='_container'>
@@ -136,15 +164,13 @@
 			</a>
 			<div class="footer__contacts">
 				<div class="footer__column">
-					<h4 class="h4 mb-4">Контакты</h4>
-					<div class="address mb-3"><i class="bi-geo-alt-fill mr-2"></i>г. Минск, ул. Скорины, 8, 3 этаж</div>
+					<h3 class="h3 mb-3">Контакты</h3>
 					<div><a class="link-contact link mb-3" href="tel:+3751726918 00"><i class="bi bi-telephone mr-2"></i><span>+375 17 269-18-00</span></a></div>
-					<div><a class="link-contact link mb-3" href="mailto:info@skno.by"><i class="bi bi-envelope mr-2"></i><span>info@skno.by</span></a></div>
+					<div><a class="link-contact link" href="mailto:info@skno.by"><i class="bi bi-envelope mr-2"></i><span>info@skno.by</span></a></div>
 				</div>
 				<div class="footer__column">
-					<div class="address mb-3"><i class="bi bi-alarm mr-2"></i>Понедельник – Четверг: с 8:45 до 18:00.</div>
-					<div class="address mb-3"><i class="bi bi-alarm mr-2"></i>Пятница: с 8:45 до 16:45.</div>
-					<div class="address mb-3"><i class="bi bi-clock-history mr-2"></i>Перерыв: с 13:00 до 14:00.</div>
+					<div class="footer__text mb-3"><i class="bi bi-alarm mr-2"></i>Пн. – Чт.: с 8:45 до 18:00. Пт.: с 8:45 до 16:45</div>
+					<div><a class="link" href="https://yandex.by/maps/-/CCURUUf-sA" target="_blank"><i class="bi-geo-alt mr-2"></i>г. Минск, ул. Скорины, 8, 3 этаж</a></div>
 				</div>
 			</div>
 		</div>
