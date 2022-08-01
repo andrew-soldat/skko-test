@@ -11,7 +11,6 @@
 	}
 
 	&__item {
-		// margin: 0 10px;
 		position: relative;
 		z-index: 2;
 
@@ -52,7 +51,7 @@
 	top: 43%;
 
 	&:hover {
-		border-color: $color-green;
+		border-color: $color-gold;
 	}
 }
 .slick-prev {
@@ -83,7 +82,7 @@
 			height: 8px;
 			border-radius: 5px;
 			border: none;	
-			background-color: $color-green;
+			background-color: $color-gold;
 			font-size: 0;
 
 			&:before {
