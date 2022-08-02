@@ -61,8 +61,6 @@
 			display: block;
 		}
 	}
-
-
 }
 .item-main-news {
 	display: block;
@@ -81,6 +79,15 @@
 		padding: 67% 0px 0px 0px;
 		position: relative;
 		overflow: hidden;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	&__info {

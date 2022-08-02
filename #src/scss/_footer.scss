@@ -10,17 +10,17 @@
 		display: flex;
 		align-items: center;
 
-		@media (max-width: 1100px) {
+		.logo {
+			margin: 0;
+		}
+
+		@media (max-width: 1120px) {
 			flex-direction: column;
 
 			.logo {
 				order: 1;
 				margin: 20px 0px 0px 0px;
 			}
-		}
-
-		@media (max-width: $md3+px) {
-			//align-items: start;
 		}
 	}
 
@@ -29,11 +29,11 @@
 		display: flex;
 		align-items: flex-end;
 
-		@media (max-width: 1200px) {
+		@media (max-width: 1250px) {
 			margin: 0px 0px 0px 70px;
 		}
 
-		@media (max-width: 1100px) {
+		@media (max-width: 1120px) {
 			margin: 0px 0px 30px 0px;
 		}
 
@@ -53,7 +53,7 @@
 		}
 
 		@media (max-width: 650px) {
-			margin: 0px 0px 24px 0px;
+			margin: 0px 0px 16px 0px;
 		}
 	}
 
