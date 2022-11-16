@@ -280,6 +280,7 @@ if (imgBanner) {
 // ===========  Label transform on input focus ===========================
 $('input,textarea').val("");
 $('.form-checking input').focusout(function() {
+	var text_val = $(this).val();
 	if (text_val === "") {
 		$(this).removeClass('has-value');
 	} else {
