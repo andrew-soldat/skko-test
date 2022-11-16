@@ -1235,11 +1235,11 @@ body._lock {
 
 .logo-checking {
   display: inline-flex;
+  font-size: 16px;
+  color: #9E9E9E;
 }
 .logo-checking__name {
   margin: 0px 30px 0px 30px;
-  font-size: 16px;
-  color: #9E9E9E;
 }
 @media (max-width: 768px) {
   .logo-checking__name {
@@ -1423,7 +1423,7 @@ body._lock {
 }
 .input__wrapper .btn-qr-code i {
   font-size: 18px;
-  color: #9E9E9E;
+  color: #272727;
 }
 .input__label {
   max-width: calc(100% - (16px * 2));
@@ -1500,7 +1500,7 @@ body._lock {
 }
 
 .modal-checking {
-  max-width: 350px;
+  max-width: 500px;
 }
 .modal-checking__content {
   position: relative;
@@ -1530,11 +1530,6 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media (max-width: 564.98px) {
-  .modal-checking {
-    padding: 16px;
-  }
 }
 .modal-checking__title {
   margin: 24px 0px;
