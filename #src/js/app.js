@@ -1,6 +1,9 @@
+@@include('libs/jquery.maskedinput.min.js', {})
+
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
 // e.x. data-da=".item,992,2"
+
 "use strict";
 function DynamicAdapt(type) {
 	this.type = type;
@@ -171,15 +174,17 @@ da.init();
 		overlay.classList.remove('_active')
 	}
 
-	burger.addEventListener("click", () => {
-		if (!menu.classList.contains('_show')) {
-			showMenu()
-		} else {
-			closeMenu()
-		}
-	})
+	if (burger) {
+		burger.addEventListener("click", () => {
+			if (!menu.classList.contains('_show')) {
+				showMenu()
+			} else {
+				closeMenu()
+			}
+		})
+	}
 	document.addEventListener('click', (e) => {
-		if (!e.target.closest(".header-burger, .header-top__menu")) {
+		if (burger && !e.target.closest(".header-burger, .header-top__menu")) {
 			closeMenu()
 		}
 	})
@@ -270,4 +275,49 @@ if (imgBanner) {
 	} else {
 		imgBanner.src = "./img/link-banner.jpg"
 	}
+}
+
+// ===========  Label transform on input focus ===========================
+$('input,textarea').val("");
+$('.form-checking input').focusout(function() {
+	if (text_val === "") {
+		$(this).removeClass('has-value');
+	} else {
+		$(this).addClass('has-value');
+	}
+});
+
+// ===========  Input mask ===========================
+$(document).ready(function(){
+	$('#uniqueId').mask('999999999999999999999999');
+	$('#checkoutNumber').mask('999999999');
+	$('#paymentDocumentNumber').mask('9999999999');
+});
+
+
+// ===========  Modal checking ===========================
+const showModal = ( type, srcImg = '') => {
+	let modalImg = document.querySelector('.modal-checking__img img');
+	let modalInfo = document.querySelector('.modal-checking__info');
+
+	switch (type) {
+		case 'info':
+			modalImg.src = `${srcImg}`;
+			modalInfo.innerHTML = '';
+			break;
+
+		case 'error':
+			modalImg.src = './img/error.svg';
+			modalInfo.innerHTML = `<div class="modal-checking__title">Произошла ошибка<br> при проверке чека!</div>
+																				<div class="modal-checking__text">Чек не найден в системе контроля кассового оборудования</div>`;
+		break;
+
+		case 'success':
+			modalImg.src = './img/success.svg';
+			modalInfo.innerHTML = `<div class="modal-checking__title">Проверка чека<br> прошла успешно!</div>
+																				<div class="modal-checking__text">Чек найден в системе контроля кассового оборудования</div>`;
+			break;
+	}
+
+	$("#modalChecking").modal("show");
 }
