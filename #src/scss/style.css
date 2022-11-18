@@ -1394,10 +1394,10 @@ body._lock {
 }
 .form-checking__button {
   margin: 36px 0px 0px 0px;
+  text-align: center;
 }
 .form-checking__button button {
-  padding: 18px;
-  width: 100%;
+  padding: 18px 40px;
   color: #FCFCFC;
   font-size: 18px;
   font-weight: 600;

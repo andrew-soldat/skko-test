@@ -206,10 +206,10 @@
   // .form-checking__button
   &__button {
     margin: 36px 0px 0px 0px;
+    text-align: center;
 
     button {
-      padding: 18px;
-      width: 100%;
+      padding: 18px 40px;
       color: $color-white;
       font-size: 18px;
       font-weight: 600;
